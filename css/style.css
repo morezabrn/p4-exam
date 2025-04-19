@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+/* ==================== تنظیمات عمومی ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* جلوگیری از مشکلات اندازه‌گیری */
+}
+
+body {
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به تمام متن‌ها */
+    background-color: #f4f4f9; /* زمینه روشن */
+    color: #333; /* رنگ متن مشکی ملایم */
+    direction: rtl; /* جهت متن از راست به چپ */
+    text-align: right; /* متن از سمت راست شروع شود */
+    line-height: 1.6; /* فاصله خطوط مناسب */
+}
+
+/* ==================== نوار بالای صفحه ==================== */
+.header-bar {
+    display: flex;
+    justify-content: space-between; /* چیدمان عناصر در دو طرف */
+    align-items: center; /* مرکز‌چینی عمودی */
+    background-color: #000000; /* زمینه مشکی */
+    color: #00ff00; /* رنگ متن سبز فسفری */
+    padding: 15px 20px; /* فاصله داخلی */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* سایه ملایم */
+    position: fixed; /* ثابت در بالای صفحه */
+    top: 0; /* در بالای صفحه قرار بگیرد */
+    left: 0; /* از چپ شروع شود */
+    width: 100%; /* عرض کامل صفحه */
+    z-index: 1000; /* بالاترین لایه */
+}
+
+.header-title {
+    font-size: 1.8rem; /* اندازه فونت بزرگ‌تر */
+    margin: 0; /* حذف حاشیه پیش‌فرض */
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به عنوان */
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 8px 15px; /* اندازه دکمه */
+    font-size: 1rem; /* اندازه فونت */
+    font-weight: bold;
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به دکمه */
+    color: #00ff00; /* رنگ متن سبز فسفری */
+    background-color: transparent; /* پس‌زمینه شفاف */
+    border: 2px solid #00ff00; /* حاشیه سبز فسفری */
+    border-radius: 5px; /* گردی گوشه‌ها */
+    text-decoration: none; /* حذف زیرخط لینک */
+    cursor: pointer; /* نشانگر دستی */
+    transition: all 0.3s ease-in-out; /* انتقال نرم */
+}
+
+#btnback1 {
+    margin-bottom: 15px;
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به دکمه با ID خاص */
+}
+
+.back-btn:hover {
+    color: #000000; /* رنگ متن مشکی هنگام هاور */
+    background-color: #00ff00; /* پس‌زمینه سبز فسفری هنگام هاور */
+    border-color: #000000; /* حاشیه مشکی هنگام هاور */
+}
+
+/* ==================== محتوای اصلی ==================== */
+.container {
+    max-width: 1200px;
+    margin: 80px auto 20px; /* فاصله از بالا برای جلوگیری از تداخل با نوار */
+    padding: 20px;
+    background: #ffffff; /* زمینه سفید */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به عنوان‌ها */
+    color: #007bff; /* رنگ آبی ملایم برای عنوان‌ها */
+    font-weight: bold; /* برجسته‌تر کردن عنوان‌ها */
+    margin-bottom: 15px; /* فاصله بین عنوان‌ها و محتوای بعدی */
+}
+
+p {
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به متن‌ها */
+    line-height: 1.6; /* فاصله خطوط مناسب */
+    margin-bottom: 15px; /* فاصله بین پاراگراف‌ها */
+}
+
+/* ==================== استایل دکمه‌ها ==================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px; /* اندازه بزرگ‌تر */
+    font-size: 1rem; /* اندازه فونت */
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به دکمه‌ها */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #00ff00; /* حاشیه سبز فسفری */
+    color: #00ff00; /* رنگ متن سبز فسفری */
+    background: #000000; /* پس‌زمینه مشکی */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* انیمیشن برای هاور */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    color: #000000; /* رنگ متن مشکی هنگام هاور */
+    background: #00ff00; /* پس‌زمینه سبز فسفری هنگام هاور */
+    border-color: #000000; /* حاشیه مشکی هنگام هاور */
+}
+
+/* ==================== استایل فرم ورودی ==================== */
+.form {
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px; /* فاصله کمتر بین برچسب و باکس ورودی */
+    font-size: 1.1rem; /* فونت بزرگ‌تر */
+    color: #007bff; /* آبی ملایم */
+    font-weight: bold; /* برجسته‌تر کردن نام باکس‌ها */
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به برچسب‌ها */
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form input[type="number"] {
+    width: 100%; /* عرض تمام‌صفحه */
+    max-width: 500px; /* حداکثر عرض بزرگ‌تر */
+    padding: 12px; /* اندازه بزرگ‌تر */
+    font-size: 1rem; /* فونت بزرگ‌تر */
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به باکس‌های ورودی */
+    border: 2px solid #007bff; /* حاشیه آبی ملایم */
+    border-radius: 5px;
+    background: #f9f9f9; /* زمینه سفید ملایم */
+    color: #333; /* رنگ متن مشکی ملایم */
+    transition: border-color 0.3s ease-in-out; /* تغییر رنگ حاشیه هنگام فوکوس */
+    margin-bottom: 15px; /* فاصله یکسان بین فیلدها */
+}
+
+.form input[type="text"]:focus,
+.form input[type="date"]:focus,
+.form input[type="number"]:focus {
+    border-color: #d9534f; /* حاشیه قرمز هنگام فوکوس */
+    outline: none;
+}
+
+.form button {
+    margin-top: 20px; /* فاصله بیشتر بین باکس‌ها و دکمه */
+    padding: 10px 20px; /* اندازه بزرگ‌تر */
+    font-size: 1rem; /* فونت بزرگ‌تر */
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به دکمه‌ها */
+    width: auto; /* عرض خودکار */
+}
+
+/* ==================== استایل باکس سیستم‌ها ==================== */
+.systems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* فاصله بین باکس‌ها */
+    margin-top: 30px;
+}
+
+.system-card {
+    background: #e9ecef; /* رنگ پس‌زمینه تیره‌تر */
+    padding: 20px;
+    border: 1px solid #ddd; /* حاشیه خاکستری ملایم */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+    flex: 1 1 calc(33.333% - 40px); /* تقسیم سه ستونی */
+    text-align: center; /* متن وسط‌چین */
+    transition: box-shadow 0.3s ease-in-out; /* فقط سایه تغییر کنه */
+}
+
+.system-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* سایه برجسته‌تر بدون تکان */
+}
+
+.system-card h2 {
+    font-size: 1.5rem;
+    color: #007bff; /* رنگ آبی ملایم */
+    margin-bottom: 10px;
+}
+
+.system-card p {
+    font-size: 1rem;
+    color: #333; /* رنگ متن مشکی ملایم */
+    margin-bottom: 10px;
+}
+
+.timer {
+    font-size: 18px;
+    color: #ff4d4d; /* رنگ قرمز برای تایمر */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ==================== استایل جدول ==================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #f9f9f9; /* زمینه سفید ملایم */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+}
+
+table th, table td {
+    border: 1px solid #ddd; /* خطوط خاکستری ملایم */
+    padding: 10px; /* اندازه بزرگ‌تر */
+    text-align: center;
+    color: #333; /* رنگ متن مشکی ملایم */
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به جدول */
+}
+
+table th {
+    background: #007bff; /* پس‌زمینه آبی ملایم برای عنوان‌ها */
+    color: #ffffff; /* رنگ متن سفید برای عنوان‌ها */
+    font-family: 'Vazirmatn', Arial, sans-serif; /* اعمال فونت Vazirmatn به عنوان‌های جدول */
+}
+
+table tr:nth-child(even) {
+    background: #f0f0f0; /* زمینه خاکستری ملایم برای ردیف‌های زوج */
+}
+
+table tr:hover {
+    background: #007bff; /* پس‌زمینه آبی ملایم هنگام هاور */
+    color: #ffffff; /* رنگ متن سفید هنگام هاور */
+}
